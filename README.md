@@ -13,8 +13,7 @@ We developed an API that is called by a telegram bot, where the Rossmann Store C
 - [Data Description](#Data-Description)
 - [Feature Engineering](#Feature-Engineering) 
 - [Exploratory Data Analysis](#Exploratory-Data-Analysis)
-- Data Preparation
-- Machine Learning Modeling
+- [Machine Learning Modeling](#Machine-Learning_modeling)
 - Model Deployment
 - Making requests (Telegram Bot) 
 
@@ -123,7 +122,7 @@ False, there stores sell more
 
 #### H3: Stores with longer competitors should sell more.
 False, these stores sell less
-<img src="img/competition_time.jpeg" alt="drawing" width="100%"/>
+<img src="img/competition time.jpeg" alt="drawing" width="100%"/>
 
 
 #### H4: Stores with active promotions for longer should sell more.
@@ -163,8 +162,48 @@ True, stores sell less
 ### Bivariate Analysis
 
 #### Categorical
+<img src="img/categorical.jpeg" alt="drawing" width="100%"/>
 
 #### Numerical
+<img src="img/numerical.jpeg" alt="drawing" width="100%"/>
+
+
+## Machine Learning Modeling
+
+**We mainly trained five models, the performance can be seen in the table below**
+
+<img src="img/models.jpeg" alt="drawing" width="100%"/>
+
+**We performed cross-validation with five folds to adress the model real performance**
+
+<img src="img/cross_validation.jpeg" alt="drawing" width="100%"/>
+
+**The chosen model was XGBoostRegressor, the error plot is as follows:**
+
+<img src="img/error.jpeg" alt="drawing" width="100%"/>
+
+### Machine Learning Performance
+
+<img src="img/ml_performance.jpeg" alt="drawing" width="100%"/>
+
+### Business Performance of all stores
+
+<img src="img/scenario.jpeg" alt="drawing" width="100%"/>
+
+
+
+## Model Deployment
+
+**The model was deployed within Heroku platform, production code was a handler that creats the API, a tester that calls the API and a class named Rossmann.py, with all the models and parameters serealized by pickle**
+
+### Demo of tester.py making requests of API
+
+<img src="img/apitest.jpeg" alt="drawing" width="100%"/>
+
+
+
+
+
 
 
 
